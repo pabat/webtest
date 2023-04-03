@@ -1,0 +1,90 @@
+/* Apply Luminor brand colors */
+:root {
+  --primary-color: #0072C6;
+  --secondary-color: #ECB810;
+  --tertiary-color: #FFFFFF;
+  --bg-color: #F7F7F7;
+  --text-color: #333333;
+}
+
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: url('bg-pattern.jpg');
+  background-repeat: repeat;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--tertiary-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Form field styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+input[type="submit"], input[type="button"] {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover,

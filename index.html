@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminor Bank - Loan Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://brandbook.luminorgroup.com/content/uploads/2021/01/Luminor_Logo_Main_rgb.png" alt="Luminor Bank logo">
+        <h1>Loan Application Form</h1>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Company Information</legend>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" placeholder="Enter your company name" required>
+            <label for="contactName">Contact Person's Name and Title:</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Enter contact person's name and title" required>
+            <label for="contactPhone">Contact Person's Phone Number:</label>
+            <input type="tel" id="contactPhone" name="contactPhone" placeholder="Enter contact person's phone number" required pattern="[0-9]{9}">
+            <label for="contactEmail">Contact Person's Email Address:</label>
+            <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter contact person's email address" required>
+            <label for="companyRegNum">Company Registration Number:</label>
+            <input type="text" id="companyRegNum" name="companyRegNum" placeholder="Enter company registration number" required>
+<label for="industryType">Industry Type:</label>
+<select id="industryType" name="industryType" required>
+  <option value="">Select industry type</option>
+  <option value="Finance">Finance/</option>
+  <option value="Manufacturing">Manufacturing</option>
+  <option value="Retail">Retail</option>
+  <option value="Retail">Healthcare</option>
+  <option value="Services">Services</option>
+  <option value="Technology">IT/Technology</option>
+  <option value="Other">Other</option>
+</select>
+<div id="otherIndustryTypeBlock" style="display: none;">
+  <label for="otherIndustryType">Please specify:</label>
+  <input type="text" id="otherIndustryType" name="otherIndustryType">
+</div>
+        </fieldset>
+        <fieldset>
+            <legend>Loan Details</legend>
+            <label for="loanPurpose">Purpose of the Loan:</label>
+            <input type="text" id="loanPurpose" name="loanPurpose" placeholder="Enter purpose of the loan" required>
+            <label for="loanAmount">Loan Amount Requested (in EUR):</label>
+            <input type="text" id="loanAmount" name="loanAmount" placeholder="Enter loan amount requested" required pattern="^\d+(,\d{3})*(\.\d+)?$">
+            <label for="repaymentTerm">Proposed Repayment Term (in months):</label>
+            <input type="number" id="repaymentTerm" name="repaymentTerm" placeholder="Enter proposed repayment term" required>
+            <label for="repaymentStartDate">Proposed Start Date for Repayment:</label>
+            <input type="date" id="repaymentStartDate" name="repaymentStartDate" required>
+        </fieldset>
+        <fieldset>
+            <legend>Financial Information</legend>
+            <label for="annualRevenue">Annual Revenue:</label>
+            <input type="text" id="annualRevenue" name="annualRevenue" placeholder="Enter annual revenue" required pattern="^\d+(,\d{3})*(\.\d+)?$">
+<label for="netIncome">Net Income:</label>
+<input type="text" id="netIncome" name="netIncome" placeholder="Enter net income" required pattern="^\d+(,\d{3})*(\.\d+)?$">
+<label for="assets">Assets:</label>
+<input type="text" id="assets" name="assets" placeholder="Enter assets" required pattern="^\d+(,\d{3})*(\.\d+)?$">
+<label for="liabilities">Liabilities:</label>
+<input type="text" id="liabilities" name="liabilities" placeholder="Enter liabilities" required pattern="^\d+(,\d{3})*(\.\d+)?$">
+</fieldset>
+<fieldset>
+<legend>Business Plan</legend>
+<label for="companyOperations">Brief Description of the Company's Operations and History:</label>
+<textarea id="companyOperations" name="companyOperations" placeholder="Enter brief description of the company's operations and history" required></textarea>
+<label for="businessPlan">Detailed Explanation of the Business Plan and its Objectives:</label>
+<textarea id="businessPlan" name="businessPlan" placeholder="Enter detailed explanation of the business plan and its objectives" required></textarea>
+<label for="loanObjectives">Statement of How the Loan will be Used to Achieve the Business Plan Objectives:</label>
+<textarea id="loanObjectives" name="loanObjectives" placeholder="Enter statement of how the loan will be used to achieve the business plan objectives" required></textarea>
+<label for="salesMarketing">Sales and Marketing Strategies:</label>
+<textarea id="salesMarketing" name="salesMarketing" placeholder="Enter sales and marketing strategies" required></textarea>
+<label for="financialProjections">Financial Projections for the Next 3-5 Years:</label>
+<textarea id="financialProjections" name="financialProjections" placeholder="Enter financial projections for the next 3-5 years" required></textarea>
+</fieldset>
+<fieldset>
+<legend>Supporting Documents</legend>
+<label for="financialStatements">Financial Statements (Income Statement, Balance Sheet, Cash Flow Statement):</label>
+<input type="file" id="financialStatements" name="financialStatements" accept=".pdf,.doc,.docx" required>
+<label for="bankStatements">Bank Statements for the Past 6-12 Months:</label>
+<input type="file" id="bankStatements" name="bankStatements" accept=".pdf,.doc,.docx" required>
+<label for="taxReturns">Tax Returns for the Past 2-3 Years:</label>
+<input type="file" id="taxReturns" name="taxReturns" accept=".pdf,.doc,.docx" required>
+<label for="collateralDocuments">Collateral Documents (if applicable):</label>
+<input type="file" id="collateralDocuments" name="collateralDocuments" accept=".pdf,.doc,.docx">
+</fieldset>
+<fieldset>
+<legend>Review and Submission</legend>
+<p>Please review all the information provided below before submitting the form.</p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</fieldset>
+</form>
+<script src="script.js"></script>
+
+</body>
+</html>
